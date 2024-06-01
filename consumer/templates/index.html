@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td, h1 {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-left: 585px;
+  
+}
+</style>
+</head>
+<body>
+
+<h1>Table of Data</h1>
+
+{% for entries in data.entries %}
+
+<table>
+    <tr>
+        <th>key</th>
+        <th>value</th>
+    </tr>
+    
+    {% for k,v in entries.items %}
+  <tr>
+    <td>{{k}}</td>
+    <td>{{v}}</td>
+  </tr>
+  
+  {% endfor %}
+</table>
+<br>
+<br>
+<br>
+{% endfor %}
+
+</body>
+</html>
